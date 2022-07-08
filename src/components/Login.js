@@ -7,6 +7,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import appStore from '../assets/app-store.webp';
+import googlePlay from '../assets/google-play.webp';
 
 const Login = () => {
 
@@ -47,15 +49,15 @@ const Login = () => {
             </div>
         </div>
         <div className="flex justify-center">
-            <div className="bg-white grid grid-cols-3 gap-4 px-16 py-8 max-w-8xl">
+            <div className="bg-white grid grid-cols-3 py-8 gap-4 md:w-11/12 max-w-7xl">
                 <TestimonialCard name="Nemanja Radivojevic" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
                 <TestimonialCard name="Tamara Peric" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
                 <TestimonialCard name="Kristina Damnjanovic" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
             </div>
         </div>
         <div className="flex justify-center">
-            <div className="bg-white grid grid-cols-5 gap-12 px-16 py-8 max-w-8xl border-b border-gray-300">
-                <div>
+            <div className="grid grid-cols-5 py-8 md:w-11/12 max-w-7xl border-b border-gray-300">
+                <div className="mr-20">
                     <h3 className="text-xl font-bold mb-4">LEGAL</h3>
                     <ul className="flex flex-col gap-2">
                         <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Privacy</li>
@@ -64,14 +66,14 @@ const Login = () => {
                         <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Intellectual Property</li>
                     </ul>
                 </div>
-                <div >
+                <div className="mr-20">
                     <h3 className="text-xl font-bold mb-4">CAREERS</h3>
                     <ul className="flex flex-col gap-2">
                         <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Careers Portal</li>
                         <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Tech Blog</li>
                     </ul>
                 </div>
-                <div >
+                <div className="mr-20">
                     <h3 className="text-xl font-bold mb-4">SOCIAL</h3>
                     <ul className="flex flex-row gap-6">
                         <InstagramIcon sx={{ width: 30, height: 30 }} className="cursor-pointer hover:text-[#d6002f]" />
@@ -80,7 +82,7 @@ const Login = () => {
                         <FacebookIcon sx={{ width: 30, height: 30 }} className="cursor-pointer hover:text-[#d6002f]" />
                     </ul>
                 </div>
-                <div >
+                <div className="mr-20">
                     <h3 className="text-xl font-normal mb-4">FAQ</h3>
                     <ul className="flex flex-col gap-2">
                         <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Destinations</li>
@@ -89,6 +91,17 @@ const Login = () => {
                         <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Promo Code</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div className="flex justify-center mt-6">
+            <div className="flex flex-col md:w-11/12 max-w-7xl mb-10 pb-4 border-b border-gray-300">
+                <div className="bg-white flex mb-4 items-center gap-6">
+                    <h3 className="text-xl font-bold">GET THE APP!</h3>
+                    <img src={appStore} className="w-36 h-12" />
+                    <img src={googlePlay} className="w-40 h-[70px]" />
+                </div>
+                <p className="text-[#505965] text-sm pb-4">Single people, listen up: If you’re looking for love, want to start dating, or just keep it casual, you need to be on Tinder. With over 55 billion matches made, it’s the place to be to meet your next best match. Let’s be real, the dating landscape looks very different today, as most people are meeting online. With Tinder, the world’s most popular free dating app, you have millions of other single people at your fingertips and they’re all ready to meet someone like you. Whether you’re straight or in the LGBTQIA community, Tinder’s here to bring you all the sparks.</p>
+                <p className="text-[#505965] text-sm">There really is something for everyone on Tinder. Want to get into a relationship? You got it. Trying to find some new friends? Say no more. New kid on campus and looking to make the most of your college experience? Tinder U’s got you covered. Tinder isn’t your average dating site — it’s the most diverse dating app, where adults of all backgrounds and experiences are invited to make connections, memories, and everything in between.</p>
             </div>
         </div>
     </div>
