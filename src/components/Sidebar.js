@@ -6,19 +6,17 @@ import Avatar from '@mui/material/Avatar';
 import img from '../assets/chat.png';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { auth } from '../firebase';
+import { signOut } from 'firebase/auth';
 
 const Sidebar = () => {
-
-  const [user] = useSignInWithGoogle(auth);
-  console.log(user)
 
   const [nav, setNav] = useState(false);
 
   return (
     <div className="basis-1/4 h-screen">
       <div className='bg-[#fd4f86] h-[73px] flex items-center justify-between px-4'>
-        <div className="flex items-center gap-2">
-          <Avatar src={user.photoUrl} sx={{ width: 32, height: 32 }} />
+        <div className="flex items-center gap-2 cursor-pointer" onClick={() => signOut(auth)}>
+          <Avatar sx={{ width: 32, height: 32 }} />
           <h3 className="text-white font-semibold">Nemanja</h3>
         </div>
         <div className="flex gap-4">
