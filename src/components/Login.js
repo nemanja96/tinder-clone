@@ -3,6 +3,10 @@ import image from '../assets/background.webp';
 import PublicIcon from '@mui/icons-material/Public';
 import logo from '../assets/logo.png';
 import TestimonialCard from './TestimonialCard';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Login = () => {
 
@@ -43,10 +47,48 @@ const Login = () => {
             </div>
         </div>
         <div className="flex justify-center">
-            <div className="bg-white grid grid-cols-3 gap-4 px-16 py-8 max-w-7xl">
+            <div className="bg-white grid grid-cols-3 gap-4 px-16 py-8 max-w-8xl">
                 <TestimonialCard name="Nemanja Radivojevic" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
                 <TestimonialCard name="Tamara Peric" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
                 <TestimonialCard name="Kristina Damnjanovic" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
+            </div>
+        </div>
+        <div className="flex justify-center">
+            <div className="bg-white grid grid-cols-5 gap-12 px-16 py-8 max-w-8xl border-b border-gray-300">
+                <div>
+                    <h3 className="text-xl font-bold mb-4">LEGAL</h3>
+                    <ul className="flex flex-col gap-2">
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Privacy</li>
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Terms</li>
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Cookie Policy</li>
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Intellectual Property</li>
+                    </ul>
+                </div>
+                <div >
+                    <h3 className="text-xl font-bold mb-4">CAREERS</h3>
+                    <ul className="flex flex-col gap-2">
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Careers Portal</li>
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Tech Blog</li>
+                    </ul>
+                </div>
+                <div >
+                    <h3 className="text-xl font-bold mb-4">SOCIAL</h3>
+                    <ul className="flex flex-row gap-6">
+                        <InstagramIcon sx={{ width: 30, height: 30 }} className="cursor-pointer hover:text-[#d6002f]" />
+                        <YouTubeIcon sx={{ width: 30, height: 30 }} className="cursor-pointer hover:text-[#d6002f]" />
+                        <TwitterIcon sx={{ width: 30, height: 30 }} className="cursor-pointer hover:text-[#d6002f]" />
+                        <FacebookIcon sx={{ width: 30, height: 30 }} className="cursor-pointer hover:text-[#d6002f]" />
+                    </ul>
+                </div>
+                <div >
+                    <h3 className="text-xl font-normal mb-4">FAQ</h3>
+                    <ul className="flex flex-col gap-2">
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Destinations</li>
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Press Room</li>
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Contact</li>
+                        <li className="text-[#21262e] text-base cursor-pointer hover:text-[#d6002f]">Promo Code</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
