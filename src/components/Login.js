@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import image from '../assets/background.webp';
 import PublicIcon from '@mui/icons-material/Public';
 import logo from '../assets/logo.png';
+import TestimonialCard from './TestimonialCard';
 
 const Login = () => {
 
@@ -39,6 +40,13 @@ const Login = () => {
                         </div>
                     }
                 </div>
+            </div>
+        </div>
+        <div className="flex justify-center">
+            <div className="bg-white grid grid-cols-3 gap-4 px-16 py-8 max-w-7xl">
+                <TestimonialCard name="Nemanja Radivojevic" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
+                <TestimonialCard name="Tamara Peric" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
+                <TestimonialCard name="Kristina Damnjanovic" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod beatae, debitis ratione cum at atque voluptatum nesciunt aliquid impedit vel aspernatur dolore soluta ex mollitia, nemo omnis dolores iusto quasi." />
             </div>
         </div>
     </div>
