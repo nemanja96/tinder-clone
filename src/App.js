@@ -1,7 +1,6 @@
 import Main from './components/Main';
 import Sidebar from './components/Sidebar';
-import './App.css';
-import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from './firebase';
 import Login from './components/Login';
 import Loading from './components/Loading';

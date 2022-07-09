@@ -4,7 +4,6 @@ import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import WorkIcon from '@mui/icons-material/Work';
 import Avatar from '@mui/material/Avatar';
 import img from '../assets/chat.png';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { auth } from '../firebase';
 import { signOut } from 'firebase/auth';
 
@@ -39,7 +38,7 @@ const Sidebar = () => {
               </div>
                 :
               <div className="mt-20 w-3/4 flex flex-col items-center">
-                <img src={img} className="w-40" />
+                <img src={img} alt="Messages" className="w-40" />
                 <h3 className="text-center text-2xl font-semibold my-2">Sag Hallo</h3>
                 <p className="text-center text-gray-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis quam quis tenetur, sequi modi quasi!</p>
               </div>
