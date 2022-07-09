@@ -1,13 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import {} from 'dotenv/config'
 import Cors from 'cors';
-
 import Cards from './dbCards.js';
 
 // App Config
 const app = express();
 const port = process.env.PORT || 8001
-const connection_url = `mongodb+srv://admin:hvU1sdS4xcaMhO5U@tinderclonecluster.1vdve.mongodb.net/?retryWrites=true&w=majority`
+const user = process.env.DB_USERNAME;
+const password = process.env.DB_PASSWORD;
+const connection_url = `mongodb+srv://${user}:${password}@tinderclonecluster.1vdve.mongodb.net/?retryWrites=true&w=majority`
 
 // Middlewares
 app.use(express.json());
