@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import IconButton from '@mui/material/IconButton';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
-import WorkIcon from '@mui/icons-material/Work';
 import Avatar from '@mui/material/Avatar';
 import img from '../assets/chat.png';
 import { auth } from '../firebase';
@@ -10,6 +9,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import ChatIcon from '@mui/icons-material/Chat';
 import StarIcon from '@mui/icons-material/Star';
 import HomeIcon from '@mui/icons-material/Home';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const Sidebar = () => {
 
@@ -20,16 +20,16 @@ const Sidebar = () => {
     <>
       <div className="hidden lg:block lg:basis-1/4 lg:max-w-sm lg:min-w-[330px] lg:h-screen lg:z-50 bg-white">
         <div className='h-[73px] flex items-center justify-between px-4' style={{ background: "linear-gradient(45deg,#fd267a,#ff6036)" }}>
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => signOut(auth)}>
+          <div className="flex items-center gap-2 cursor-pointer">
             <Avatar src={user?.photoURL} sx={{ width: 32, height: 32 }} />
-            <h3 className="text-white font-semibold">Nemanja</h3>
+            <h3 className="text-white font-semibold">{user?.displayName}</h3>
           </div>
           <div className="flex gap-4">
             <IconButton style={{ background: "rgba(0, 0, 0, 0.3)" }} sx={{ width: 36, height: 36 }}>
               <ManageSearchIcon className="text-white" />
             </IconButton>
             <IconButton style={{ background: "rgba(0, 0, 0, 0.3)" }} sx={{ width: 36, height: 36 }}>
-              <WorkIcon className="text-white" sx={{ width: 22, height: 22 }} />
+              <LogoutIcon onClick={() => signOut(auth)} sx={{ width: 22, height: 22 }} className="text-white" />
             </IconButton>
           </div>
         </div>
@@ -47,7 +47,7 @@ const Sidebar = () => {
                   :
                 <div className="mt-20 w-3/4 flex flex-col items-center">
                   <img src={img} alt="Messages" className="w-40 mb-2" />
-                  <h3 className="text-center text-2xl font-semibold my-2">Sag Hallo</h3>
+                  <h3 className="text-center text-2xl font-semibold my-2">Say Hello</h3>
                   <p className="text-center text-sm text-gray-700">Looking to strike up a conversation? When you match with others, you can send them a message under "Matches"</p>
                 </div>
           }
